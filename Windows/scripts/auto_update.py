@@ -1,12 +1,12 @@
-import ctypes
+# import ctypes
 import subprocess
 import os
 
-def is_admin() -> bool:
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except Exception:
-        return False
+# def is_admin() -> bool:
+#     try:
+#         return ctypes.windll.shell32.IsUserAnAdmin()
+#     except Exception:
+#         return False
 
 def windows_update():
     subprocess.run(
@@ -61,9 +61,9 @@ def hp_update():
     )
 
 def main():
-    if not is_admin():
-        print("This script must be run as an administrator.")
-        return
+    # if not is_admin():
+    #     print("This script must be run as an administrator.")
+    #     return
 
     print("Starting Windows Update...")
     windows_update()
